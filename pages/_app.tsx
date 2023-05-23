@@ -8,8 +8,8 @@ import {
 } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import type { AppContext } from 'next/app';
-import Layout from '../components/layout/Layout';
-import '../styles/globals.css';
+import Layout from '@/components/layout/Layout';
+import '@/styles/globals.css';
 import { useRouter } from 'next/router';
 
 function App({ Component, pageProps, headerData }: any) {

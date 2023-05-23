@@ -1,12 +1,12 @@
 import { FC, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import NewsService from '../../services/NewsService';
+import NewsService from '@/services/NewsService';
 import { useRouter } from 'next/router';
 
 const index: FC = () => {
   const { locale } = useRouter();
   const { data, isLoading, error } = useQuery<any>({
-    queryKey: ['fitch news', locale],
+    queryKey: ['fetch news', locale],
     queryFn: () => NewsService.getAllNews(locale),
   });
 

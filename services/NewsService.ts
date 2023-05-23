@@ -1,4 +1,4 @@
-import apiClient from "../libs/axios";
+import apiClient from "@/libs/axios";
 
 
 const getAllNews = async (lang: any) => {

@@ -4,12 +4,22 @@ import { Inter } from 'next/font/google';
 import { useRouter } from 'next/router';
 
 import useTranslation from 'next-translate/useTranslation';
+import { useQuery } from '@tanstack/react-query';
+import HomeService from '@/services/HomeService';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const { locale } = useRouter();
   const { t } = useTranslation();
+  let newsCount = 5;
+  const { data, isLoading, error } = useQuery<any>({
+    queryKey: ['fetch-home-news', newsCount, locale],
+    queryFn: () => HomeService.getHomeNews(locale, newsCount),
+  });
+
+  console.log('first', data);
+
   return (
     <>
       <Head>
