@@ -1,7 +1,7 @@
-import HttpService from '@/libs/axiosKeycloak';
+import apiClient from '@/libs/axios';
 
 const getHomeNews = async (lang: string | undefined, count: number) => {
-  const response = await HttpService.get(
+  const response = await apiClient.get(
     `/News/GetHomeNews?count=${count}&lang=${lang}`
   );
   return response.data;

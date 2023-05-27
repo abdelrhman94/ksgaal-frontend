@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-keycloak/ssr": "^3.3.0",
+    "@react-keycloak/ssr": "^3.0.0",
     "@tanstack/react-query": "^4.29.7",
     "@tanstack/react-query-devtools": "^4.29.7",
     "@types/node": "20.2.3",
@@ -17,9 +17,10 @@
     "@types/react-dom": "18.2.4",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "cookie": "^0.4.1",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
-    "keycloak-js": "^21.1.1",
+    "keycloak-js": "^11.0.2",
     "next": "13.4.3",
     "next-translate": "^2.0.5",
     "react": "18.2.0",
@@ -28,6 +29,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/cookie": "^0.4.0",
     "next-translate-plugin": "^2.0.5"
   }
 }
